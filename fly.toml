@@ -7,7 +7,13 @@ primary_region = 'lax'
 [[mounts]]
   source = 'n8n_data'
   destination = '/home/node/data'
-
+  
+[env]
+  N8N_HOST = "0.0.0.0"
+  N8N_PORT = "5678"
+  N8N_RUNNERS_MODE = "internal_launcher"
+  N8N_RUNNERS_CONFIG_PATH = "/etc/n8n-task-runners.json"
+  
 [http_service]
   internal_port = 5678
   force_https = true
